@@ -9,7 +9,7 @@ import axios from "axios";
 class HomePage extends Component {
   state = {
     results: [],
-
+    search :"",
   };
 // Its working when we call the API directly in componentDidMount
 componentDidMount() {
@@ -17,10 +17,6 @@ componentDidMount() {
   .then((res) => this.setState({results : res.data.results}))
       //.then((res)=> console.log(res))
   }
-componentDidUpdate(){
-  console.log("This is ComponentDidUpdate")
-  console.log(this.state.results);
-}
 
 handleInputChange = event => {
   const name = event.target.name;
@@ -28,27 +24,36 @@ handleInputChange = event => {
     this.setState({
       [name] : value
     })
+    const filtered = this.state.results.filter(employee => 
+      employee.name.first.toLowerCase().includes(this.state.search.toLowerCase()));
+      this.setState({results:filtered});
+}
+handleSort = event => {
+  const sortedResults = this.state.results.sort((a,b)=> {
+    return a.name.last > b.name.lst ? 1 : -1;
+  });
+   this.setState({results:sortedResults})
 }
 
-// handleSubmitBtn = event => {
-//   event.preventDefault();
-//   this.state.search = this.componentDidMount();
-// };
-sort = () => {
-  const sortResults = this.state.results.sort();
-  console.log("Sorted Results ==>",sortResults)
-}
+
+// When the form is submitted, search the Giphy API for `this.state.search`
+handleFormSubmit = event => {
+  event.preventDefault();
+  const response = this.searchFunc(this.state.results);
+  return response;
+};
   render() {
     return (
       <div>
         <Navbar />
-        <Search />
-        search = {this.state.search}
+        <Search 
+        search = {this.state.results}
         handleInputChange  = {this.handleInputChange}
         handleSubmitBtn = {this.handleSubmitBtn}
+        />
         <Table
           results = {this.state.results}
-          sort  = {this.sort}
+          sort = {this.handleSort}
         />
       </div>
     );

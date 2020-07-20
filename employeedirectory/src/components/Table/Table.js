@@ -32,10 +32,10 @@ function Table(props) {
       <thead>
         <tr>
           <th scope="col">Image</th>
-          <th scope="col">Name</th>
+          <th scope="col">Name
+          <button  onClick =  { () => props.sort()}> Sort</button></th>
           <th scope="col">Phone</th>
-          <th scope="col">Email
-          <button  onClick={() => props.sort()}> Sort</button></th>
+          <th scope="col">Email</th>
           <th scope="col">DOB</th>
         </tr>
       </thead>
@@ -43,7 +43,7 @@ function Table(props) {
         {props.results.map(employee => {
           console.log(employee);
           return (
-            <tr key={employee.email}>
+            <tr key={employee.phone}>
               <td><img alt="employee" src={employee.picture.thumbnail}/></td>
               <td>{employee.name.first + " " + employee.name.last}</td>
               <td>{employee.phone}</td>

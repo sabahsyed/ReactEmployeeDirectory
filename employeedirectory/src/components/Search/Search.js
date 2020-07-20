@@ -1,33 +1,24 @@
-import React , {Component} from "react";
+import React from "react";
+function Search(props) {
+    return (
+      <form>
+        <div className="form-group">
+          <label htmlFor="search">Search:</label>
+          <input
+            handleInputChange={props.handleInputChange}
+            //value={props.search}
+            name="search"
+            type="text"
+            className="form-control"
+            placeholder="Name"
+            id="search"
+          />
+          <button onClick={props.handleFormSubmit} className="btn btn-primary mt-3">
+            Search
+          </button>
+        </div>
+      </form>
+    );
+  }
 
-
-export class Index extends Component {
-    state = {
-        search : "",
-    }
-    handleInputChange =(event =>{
-        const {search,value } = event.target;
-
-        this.setState({
-            [search] : value,
-        })
-    })
-    render() {
-        return (
-            <div>
-                <form className = "form">
-                    <input
-                    value = {this.state.search}
-                    search = "firstName"
-                    onChange = {this.handleInputChange}
-                    type = "text"
-                    placeholder = "Search for employee"
-                />
-                </form>
-                
-            </div>
-        )
-    }
-}
-
-export default Index
+export default Search
