@@ -26,9 +26,9 @@ npm
 npm create-react-app
 
 ## Screenshots
-![ReactEmplyoeeDirectory](src/Screenshots /Screen Shot 2020-07-19 at 9.53.15 PM.png)
+![ReactEmplyoeeDirectory](https://github.com/sabahsyed/ReactEmployeeDirectory/blob/master/src/Screenshots%20/Screen%20Shot%202020-07-19%20at%209.53.15%20PM.png)
 
-![ReactEmplyoeeDirectory](src/Screenshots /reactEmployeeDirecGIF.gif)
+![ReactEmplyoeeDirectory](https://github.com/sabahsyed/ReactEmployeeDirectory/blob/master/src/Screenshots%20/reactEmployeeDirecGIF.gif)
 
 Questions
 
