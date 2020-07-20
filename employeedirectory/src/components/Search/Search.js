@@ -1,4 +1,5 @@
 import React from "react";
+import "./Search.css"
 function Search(props) {
     return (
       <form>
@@ -12,8 +13,10 @@ function Search(props) {
             className="form-control"
             placeholder="Name"
             id="search"
+            // eslint-disable-next-line react/jsx-no-duplicate-props
+            className = "inputClass"
           />
-          <button onClick={props.handleFormSubmit} className="btn btn-primary mt-3">
+          <button onClick={props.handleFormSubmit} className=" btn-primary mt-3">
             Search
           </button>
         </div>
