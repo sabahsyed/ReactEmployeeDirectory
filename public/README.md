@@ -11,7 +11,7 @@
 ### GIF
 ### Questions
 
-## Introductiom
+## Introduction
   Here we have  a simple table with 4 fields of an employee's name, image , email and phone number . This application is my first attempt at using REACT. It simply layouts details of about 200 employee whom we have sorted by name. 
   There is also a search form that searhes an employee by name.
 
