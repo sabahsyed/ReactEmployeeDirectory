@@ -1,34 +1,36 @@
-* An app with 200 employees , with  4 fields  name, phone, email, DOB
-  -API--> /utils/API.js
-* Be able to search by name 
-* Order atleast one field.
-## Pages
-index --> App --> Homepage --> Header(About), Search and Table
 
 
 # React : Employee Directory
 
-## Overview
+## Table of Contents
 
-For this assignment, you'll create a employee directory with React. This assignment will require you to break up your application's UI into components, manage component state, and respond to user events.
+### Introduction
+### UserStory
+### Installation
+### Screenshots
+### GIF
+### Questions
 
-You can get a list of 200 employees here: https://randomuser.me/api/?results=200&nat=u
+## Introductiom
+  Here we have  a simple table with 4 fields of an employee's name, image , email and phone number . This application is my first attempt at using REACT. It simply layouts details of about 200 employee whom we have sorted by name. 
+  There is also a search form that searhes an employee by name.
 
-## User Story
+## User Story 
 
 - As a user, I want to be able to view my entire employee directory at once so that I have quick access to their information.
 
-## Business Context
 
-An employee or manager would benefit greatly from being able to view non-sensitive data about other employees. It would be particularly helpful to be able to filter employees by name.
+## Installation
+To install necessary dependencies, run the following command:
+npm 
+npm create-react-app
 
-## Acceptance Criteria
+## Screenshots
+![ReactEmplyoeeDirectory](src/Screenshots /Screen Shot 2020-07-19 at 9.53.15 PM.png)
 
-Given a table of random users, when the user loads the page, a table of employees should render.
+![ReactEmplyoeeDirectory](src/Screenshots /reactEmployeeDirecGIF.gif)
 
-The user should be able to:
+Questions
 
-- Sort the table by at least one category
-
-- Filter the users by at least one property.
-
+If you have any questions drop by at ![SabahSyedGitHubProfile](https://github.com/sabahsyed)
+![SabahSyedLinkedIn](https://www.linkedin.com/in/sabah-syed-89a07344/)
