@@ -1,5 +1,3 @@
-
-
 # React : Employee Directory
 
 ## Table of Contents
