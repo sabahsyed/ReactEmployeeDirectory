@@ -1,10 +1,14 @@
 # React : Employee Directory
 
+
+### Link to deployed app 
+![REACTEmployeeDirectory](http://10.0.0.64:3000/ReactEmployeeDirectory)
 ## Table of Contents
 
 ### Introduction
 ### UserStory
 ### Installation
+
 ### Screenshots
 ### GIF
 ### Questions
