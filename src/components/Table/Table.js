@@ -5,9 +5,16 @@ import "./Table.css"
 function Table(props) {
 
   const {handleSort, sortAscending, results}= props
-  const ascending = results.sort((a,b) => a.name.last - b.name.last)
-  const descending = results.sort((b,a) => b.name.last - a.name.last) 
-  const ascendingMap =   ascending.map(employee => {
+  const ascending = results.sort((a,b) => a.name.last - b.name.last);
+  console.log("Ascending results===>", ascending);
+  const descending = results.sort((b,a) =>  b.name.last - a.name.last) 
+  console.log("Descending results===>", ascending);
+
+  // const ascending  = results.sort((function(a, b){return a-b}));
+  // const descending  = results.sort((function(a, b){return b-a}));
+
+
+  const ascendingMap = ascending.map(employee => {
     console.log(`last name ascending --> `, employee.name.last)
     return (
       <tr key={employee.phone}>
