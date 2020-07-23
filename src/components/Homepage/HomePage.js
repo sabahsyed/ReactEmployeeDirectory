@@ -10,6 +10,7 @@ class HomePage extends Component {
   state = {
     results: [],
     search :"",
+    sortAscending: true
   };
 // Its working when we call the API directly in componentDidMount
 componentDidMount() {
@@ -28,11 +29,20 @@ handleInputChange = event => {
       employee.name.first.toLowerCase().includes(this.state.search.toLowerCase()));
       this.setState({results:filtered});
 }
-handleSort = event => {
-  const sortedResults = this.state.results.sort((a,b)=> {
-    return a.name.last > b.name.lst ? 1 : -1;
-  });
-   this.setState({results:sortedResults})
+// handleSort = event => {
+//   const sortedResults = this.state.results.sort((a,b)=> {
+//     return a.name.last > b.name.last ? 1 : -1;
+//   });
+//    this.setState({results:sortedResults})
+// }
+// // true/false
+// // this.sortAscending = true
+
+
+handleSort = () => {
+ this.setState({
+   sortAscending : !this.state.sortAscending
+ })
 }
 
 
@@ -53,7 +63,8 @@ handleFormSubmit = event => {
         />
         <Table
           results = {this.state.results}
-          sort = {this.handleSort}
+          sortAscending = {this.state.sortAscending}
+          handleSort={this.handleSort}
         />
       </div>
     );
@@ -61,3 +72,4 @@ handleFormSubmit = event => {
 }
 
 export default HomePage;
+
